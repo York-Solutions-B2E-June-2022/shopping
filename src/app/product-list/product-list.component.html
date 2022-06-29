@@ -1,0 +1,11 @@
+Sort: <select [ngModel]="selectedSort" (ngModelChange)="sort($event)">
+  <option value="rating">Rating</option>
+  <option value="price">Price</option>
+  <option value="title">Title</option>
+</select>
+
+Filter: <input [ngModel]="searchText" (ngModelChange)="filter($event)">
+
+<div *ngFor="let product of productList">
+  <app-product [product]="product" ></app-product>
+</div>
